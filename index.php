@@ -76,7 +76,7 @@
     <nav class="hidden md:flex space-x-6 text-gray-800 font-medium">
       <a href="#griffon-neler" class="nav-link hover:text-red-600">Özellikler</a>
       <a href="#" class="nav-link hover:text-red-600">Destek</a>
-      <a href="https://wa.me/" target="_blank" class="px-5 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">Ücretsiz İndir</a>
+      <a href="https://wa.me/905011891645" target="_blank" class="px-5 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">Ücretsiz İndir</a>
     </nav>
   </div>
 </header>
@@ -253,7 +253,7 @@
                             <span>Tüm Özelliklere Tam Erişim</span>
                         </li>
                     </ul>
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/" class="block w-full py-3 px-6 bg-gray-100 text-gray-800 rounded-lg text-center font-medium hover:bg-gray-200">Paketi Seç</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/905011891645" class="block w-full py-3 px-6 bg-gray-100 text-gray-800 rounded-lg text-center font-medium hover:bg-gray-200">Paketi Seç</a>
                 </div>
                 
                 <!-- Pro Plan -->
@@ -283,7 +283,7 @@
                             <span>Tüm Özelliklere Tam Erişim</span>
                         </li>
                     </ul>
-                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/" class="block w-full py-3 px-6 bg-indigo-600 text-white rounded-lg text-center font-medium hover:bg-indigo-700">Paketi Seç</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://wa.me/905011891645" class="block w-full py-3 px-6 bg-indigo-600 text-white rounded-lg text-center font-medium hover:bg-indigo-700">Paketi Seç</a>
                 </div>
                 
                
@@ -366,7 +366,7 @@
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold mb-4">Griffon'u Deneyin!</h2>
             <p class="text-xl mb-6 max-w-2xl mx-auto">Hizmeti beğenmediğiniz takdirde ücretiniz aynı gün iade!.</p>
-            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/" class="inline-block px-8 py-3 bg-white text-red-600 rounded-md font-bold hover:bg-gray-100">ÜCRETSİZ İNDİR</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://wa.me/905011891645" class="inline-block px-8 py-3 bg-white text-red-600 rounded-md font-bold hover:bg-gray-100">ÜCRETSİZ İNDİR</a>
         </div>
     </section>
 
