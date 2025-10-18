@@ -1,14 +1,13 @@
-# Basit PHP 8.2 ortamı (Render uyumlu)
+# PHP 8.2 CLI
 FROM php:8.2-cli
 
-# Çalışma dizini
 WORKDIR /app
 
-# Kodları kopyala
+# Projeyi kopyala
 COPY . .
 
-# Uygulama portu
+# Uygulama portu (göstermek opsiyonel)
 EXPOSE 10000
 
-# Router ile başlat: data klasörünü garanti oluştur + built-in server
-CMD bash -c "mkdir -p data && php -S 0.0.0.0:10000 router.php"
+# Not: Render trafiği $PORT'a yönlendirir. $PORT yoksa 10000'e düşer.
+CMD bash -lc "mkdir -p data && php -S 0.0.0.0:${PORT:-10000} router.php"
