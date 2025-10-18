@@ -18,10 +18,12 @@ function resolve_app($name) {
   return null;
 }
 
-/* ---- ROOT (/) → ÖNCE index.html, sonra index.php ---- */
+/* ---- ROOT (/) ----
+   Önce index-landing.php, sonra index.php, en son index.html */
 if ($uri === '/') {
-  if (file_exists(__DIR__ . '/index.html')) { readfile(__DIR__ . '/index.html'); exit; }
-  if ($p = resolve_app('index.php'))       { require $p; exit; }
+  if (file_exists(__DIR__ . '/index-landing.php')) { require __DIR__ . '/index-landing.php'; exit; }
+  if ($p = resolve_app('index.php'))               { require $p; exit; }
+  if (file_exists(__DIR__ . '/index.html'))        { readfile(__DIR__ . '/index.html'); exit; }
   http_response_code(404); echo 'No index found.'; exit;
 }
 
