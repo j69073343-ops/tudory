@@ -4,7 +4,7 @@ session_start();
 
 // Zaten giriş yaptıysa dashboard'a gönder
 if (!empty($_SESSION['auth']) && $_SESSION['auth'] === true) {
-    header('Location: dashboard.php');
+    header('Location: /dashboard');
     exit;
 }
 
@@ -14,10 +14,20 @@ if (empty($_SESSION['csrf_token'])) {
 }
 $csrf_token = $_SESSION['csrf_token'];
 
-// *** ÖNEMLİ: DB YOLU (debug_users.php'nin gösterdiğiyle birebir) ***
-$DB_PATH = __DIR__ . '/data/users.db';
+/* ---------- DB YOLU (kökteki /data veya bir üstteki /data) ---------- */
+function resolve_db_path(): string {
+    // admin.php kökte ise: __DIR__/data/users.db
+    $p1 = __DIR__ . '/data/users.db';
+    // admin.php /griffonpanel içinde ise: ../data/users.db
+    $p2 = dirname(__DIR__) . '/data/users.db';
+    if (file_exists($p1)) return $p1;
+    if (file_exists($p2)) return $p2;
+    // yoksa yine p2'yi hedefle (Render’da mkdir ile oluşur)
+    return $p2;
+}
+$DB_PATH = resolve_db_path();
 
-// İstersen demo fallback açık kalsın (admin / Griffon123!)
+/* ---------- Demo fallback (isteğe bağlı) ---------- */
 $ALLOW_FALLBACK_DEMO = true;
 $DEMO_USER = 'admin';
 $DEMO_PASS = 'Griffon123!';
@@ -51,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $ok = verify_user_from_db($username, $password, $DB_PATH);
 
-            // Opsiyonel demo fallback
             if (!$ok && $ALLOW_FALLBACK_DEMO && $username === $DEMO_USER && $password === $DEMO_PASS) {
                 $ok = true;
             }
@@ -60,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['auth'] = true;
                 $_SESSION['user'] = $username;
                 $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // token yenile
-                header('Location: dashboard.php');
+                header('Location: /dashboard'); // <-- pretty route
                 exit;
             } else {
                 $error = 'Kullanıcı adı veya şifre hatalı.';
@@ -82,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="w-full max-w-md">
     <header class="bg-gray-400 rounded-t-xl px-6 py-4 shadow-md">
       <div class="flex items-center space-x-3">
-        <img src="assets/logo.png" alt="Griffon Logo" class="h-16 w-auto" onerror="this.style.display='none'">
+        <img src="/assets/logo.png" alt="Griffon Logo" class="h-16 w-auto" onerror="this.style.display='none'">
         <span class="text-lg font-semibold text-gray-900">Griffon Kullanıcı Paneli</span>
       </div>
     </header>
@@ -97,7 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
       <?php endif; ?>
 
-      <form method="post" class="space-y-4" autocomplete="off" action="admin.php">
+      <!-- ÖNEMLİ: action'ı absolute /admin yap -->
+      <form method="post" class="space-y-4" autocomplete="off" action="/admin">
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf_token, ENT_QUOTES, 'UTF-8'); ?>" />
 
         <div>
@@ -121,10 +131,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </form>
 
       <div class="mt-6 text-xs text-gray-500">
-        <p>: <code><?= htmlspecialchars($DB_PATH, ENT_QUOTES, 'UTF-8'); ?></code></p>
-        <p>.</p>
+        <p>DB: <code><?= htmlspecialchars($DB_PATH, ENT_QUOTES, 'UTF-8'); ?></code></p>
       </div>
     </div>
   </div>
 </body>
 </html>
+
