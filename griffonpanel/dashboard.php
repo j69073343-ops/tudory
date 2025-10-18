@@ -263,7 +263,7 @@ if ($installLocked) $bodyClass .= " alert-mode";
               <div class="mt-4 p-3 rounded border-l-4 border-red-500 bg-red-50 text-red-700">
                 <strong><?= htmlspecialchars($b['title']) ?>:</strong> <?= htmlspecialchars($b['text']) ?>
                 <div class="mt-2 text-sm text-gray-700">WhatsApp üzerinden destek alın.</div>
-                <a href="https://wa.me/" target="_blank" rel="noopener" class="inline-block mt-3 px-3 py-2 bg-green-600 text-white rounded">WhatsApp Destek</a>
+                <a href="https://wa.me/905011891645" target="_blank" rel="noopener" class="inline-block mt-3 px-3 py-2 bg-green-600 text-white rounded">WhatsApp Destek</a>
               </div>
             <?php endif; ?>
           </div>
