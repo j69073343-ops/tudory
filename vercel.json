@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "https://tudory.onrender.com/$1" }
+  ]
+}
