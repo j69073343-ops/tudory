@@ -1,12 +1,11 @@
 services:
   - type: web
-    name: tpao-sim
-    env: nixpacks
-    plan: starter
-    buildCommand: ""
-    startCommand: php -S 0.0.0.0:$PORT
+    name: tudory
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
     autoDeploy: true
     disk:
       name: data
-      mountPath: /opt/render/project/src/data
+      mountPath: /var/www/html/data   # PHP'de kullandığın __DIR__/data ile aynı
       sizeGB: 1
