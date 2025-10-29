@@ -21,7 +21,7 @@ function tl($n){ return number_format((float)$n, 2, ',', '.'); }
 function now(){ return date('Y-m-d H:i:s'); }
 
 // İlk kurulum
-$wallet = jload($WALLET_FILE, ['balance'=>100000.00]);
+$wallet = jload($WALLET_FILE, ['balance'=>00.00]);
 $panel  = jload($PANEL_FILE,  ['buy_price'=>35.50,'sell_price'=>35.20,'fee_percent'=>0.10,'min_qty'=>1,'max_qty'=>100000]);
 $pf     = jload($PORTF_FILE,  ['TPAO'=>['qty'=>0,'avg_price'=>0]]);
 $hist   = jload($HIST_FILE,   []);
