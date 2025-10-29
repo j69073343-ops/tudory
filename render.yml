@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: tpao-sim
+    env: nixpacks
+    plan: starter
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:$PORT
+    autoDeploy: true
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
