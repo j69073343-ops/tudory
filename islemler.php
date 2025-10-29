@@ -156,7 +156,7 @@ $unreal          = $qty>0 ? ($sellP - $avg) * $qty : 0;
 
 <header>
   <div class="wrap">
-    <div class="h1">İşlemler · Türkiye Petrolleri A.Ş.</div>
+    <div class="h1">İşlemler · TOGG A.Ş.</div>
 
     <div class="summary">
       <div class="sum"><div class="k">Bakiye (TL)</div><div class="v"><?= tl($bal) ?> ₺</div></div>
@@ -181,7 +181,7 @@ $unreal          = $qty>0 ? ($sellP - $avg) * $qty : 0;
       </div>
 
       <div class="inst">
-        <div class="name">Türkiye Petrolleri A.Ş. (TPAO)</div>
+        <div class="name">TOGG A.Ş. (TPAO)</div>
         <div class="mut">Para Birimi: TL · Komisyon: <?= rtrim(rtrim(number_format((float)$panel['fee_percent'],2,'.',''), '0'), '.') ?>%</div>
       </div>
 
