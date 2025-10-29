@@ -1,0 +1,9 @@
+# data içindeki dosyalar repoya eklenmesin
+data/*
+!data/.gitkeep
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
