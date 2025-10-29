@@ -1,0 +1,42 @@
+[
+    {
+        "id": "T68fa5364756c2",
+        "pair": "BTC\/USD",
+        "side": "BUY",
+        "amount": 0.025,
+        "entry": 64123.5,
+        "current": 65010,
+        "opened_at": "2025-10-23T12:10:12+02:00",
+        "leverage": 5
+    },
+    {
+        "id": "T68fa536475f42",
+        "pair": "ETH\/USD",
+        "side": "SELL",
+        "amount": 1.2,
+        "entry": 2531.4,
+        "current": 2567.3,
+        "opened_at": "2025-10-23T06:10:12+02:00",
+        "leverage": 3
+    },
+    {
+        "id": "T68fa536475f46",
+        "pair": "EUR\/USD",
+        "side": "BUY",
+        "amount": 2000,
+        "entry": 1.0741,
+        "current": 1.0786,
+        "opened_at": "2025-10-22T18:10:12+02:00",
+        "leverage": 1
+    },
+    {
+        "id": "T68fa536475f48",
+        "pair": "XAU\/USD",
+        "side": "BUY",
+        "amount": 0.5,
+        "entry": 2368.4,
+        "current": 2355.1,
+        "opened_at": "2025-10-22T06:10:12+02:00",
+        "leverage": 2
+    }
+]

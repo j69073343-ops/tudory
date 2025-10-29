@@ -1,0 +1,32 @@
+[
+    {
+        "ts": "2025-10-24 00:40:29",
+        "qty_at_change": 251,
+        "avg_price": 35.5,
+        "old_buy": 35.5,
+        "new_buy": 42,
+        "old_sell": 35.2,
+        "new_sell": 42,
+        "portfolio_value_before": 8835.2,
+        "portfolio_value_after": 10542,
+        "portfolio_value_delta": 1706.7999999999993,
+        "unreal_before": -75.29999999999929,
+        "unreal_after": 1631.5,
+        "unreal_delta": 1706.7999999999993
+    },
+    {
+        "ts": "2025-10-24 00:41:06",
+        "qty_at_change": 211,
+        "avg_price": 42,
+        "old_buy": 42,
+        "new_buy": 49,
+        "old_sell": 42,
+        "new_sell": 49,
+        "portfolio_value_before": 8862,
+        "portfolio_value_after": 10339,
+        "portfolio_value_delta": 1477,
+        "unreal_before": 0,
+        "unreal_after": 1477,
+        "unreal_delta": 1477
+    }
+]

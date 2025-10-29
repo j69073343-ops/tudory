@@ -1,0 +1,44 @@
+[
+    {
+        "ts": "2025-10-29 06:15:45",
+        "type": "DEPOSIT",
+        "amount": 9000,
+        "status": "COMPLETED",
+        "note": "Yatırım işlemi başarılı."
+    },
+    {
+        "ts": "2025-10-29 06:15:59",
+        "type": "DEPOSIT",
+        "amount": 9000,
+        "status": "COMPLETED",
+        "note": "Yatırım işlemi başarılı."
+    },
+    {
+        "ts": "2025-10-29 06:16:21",
+        "type": "WITHDRAW",
+        "amount": 9000,
+        "status": "COMPLETED",
+        "note": "Çekim onaylandı."
+    },
+    {
+        "ts": "2025-10-29 06:25:17",
+        "type": "DEPOSIT",
+        "amount": 111,
+        "status": "CANCELED",
+        "note": "Yatırım iptal edildi (admin)."
+    },
+    {
+        "ts": "2025-10-29 06:25:32",
+        "type": "WITHDRAW",
+        "amount": 111,
+        "status": "REJECTED",
+        "note": "Çekim talebi reddedildi."
+    },
+    {
+        "ts": "2025-10-29 06:25:44",
+        "type": "WITHDRAW",
+        "amount": 111,
+        "status": "REJECTED",
+        "note": "Çekim talebi reddedildi."
+    }
+]

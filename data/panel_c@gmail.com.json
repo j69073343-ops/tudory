@@ -1,0 +1,7 @@
+{
+    "buy_price": 49,
+    "sell_price": 49,
+    "fee_percent": 0.1,
+    "min_qty": 1,
+    "max_qty": 100000
+}
